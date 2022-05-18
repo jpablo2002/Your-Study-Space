@@ -23,6 +23,21 @@ export const createUser = async (req, res) => {
     }
 }
 
+export const findUser = async (req, res) => {
+    const username = req.params.username;
+    const password = req.params.password
+
+    const found = await User.findOne({ username });
+
+    if (found && found?.password === password) {
+        res.json({ userFound: true, allowLogin: true })
+    } else if (found && found?.password !== password) {
+        res.json({ userFound: true, allowLogin: false })
+    } else {
+        res.json({ userFound: false, allowLogin: false })
+    }
+}
+
 export const updateUserTasks = (req, res) => {
     const newTasks = req.body;
 
