@@ -53,3 +53,16 @@ export const updateUserTasks = async (req, res) => {
         res.status(409).json({ message: err.message })
     }
 }
+
+export const fetchUserTasks = async (req, res) => {
+    const username = req.params.username;
+
+    const found = await User.findOne({ username });
+
+    if (found) {
+        res.json({ userFound: true, tasks: found.tasks })
+    }
+    else {
+        res.status(201).json({ userFound: false, tasks: [] })
+    }
+}
