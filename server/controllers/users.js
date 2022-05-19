@@ -41,7 +41,6 @@ export const findUser = async (req, res) => {
 export const updateUserTasks = async (req, res) => {
     const username = req.params.username;
     const updatedTasks = req.body;
-    console.log(updatedTasks);
 
     const found = await User.findOne({ username });
 
