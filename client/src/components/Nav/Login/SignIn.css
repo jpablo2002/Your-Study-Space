@@ -1,0 +1,15 @@
+.button {
+    transition: all 0.3s ease 0s;
+}
+
+.signin button {
+    margin: 12px;
+    font-size: 1.1rem;
+    padding: 6px 12px;
+}
+
+.signin button:hover {
+    color: rgba(37, 37, 37, 0.75);
+    background-color: rgba(187, 187, 187, 0.353);
+    cursor: pointer;
+}

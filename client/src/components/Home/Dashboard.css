@@ -1,0 +1,16 @@
+.dashboard {
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard h1 {
+    margin: 0;
+    color: white;
+}
+
+h1.weather {
+    margin-right: 30px;
+}

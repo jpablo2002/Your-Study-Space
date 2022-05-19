@@ -1,0 +1,28 @@
+html,
+body {
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+.home {
+    height: 90vh;
+    background-image: url('../../../public/study_image.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-button {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.25);
+    ;
+}
+
+.button {
+    transition: all 0.3s ease 0s;
+}

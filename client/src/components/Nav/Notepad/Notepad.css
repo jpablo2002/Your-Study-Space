@@ -1,0 +1,50 @@
+.notepad {
+    background-color: rgba(20, 20, 20, 0.75);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px 20px;
+    color: rgb(244, 242, 242);
+    width: 270px;
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.notepad h1 {
+    border-bottom: 4px solid white;
+}
+
+.form input {
+    display: block;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 8px;
+    min-height: 30px;
+}
+
+.form button {
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    padding: 6px 12px;
+}
+
+.note {
+    border: 3px solid white;
+    border-radius: 15px;
+    margin: 8px 0;
+    padding: 4px 8px;
+}
+
+.note button {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 85%;
+    transition: all 0.3s ease 0s;
+}
+
+.note button:active {
+    background-color: rgb(244, 242, 242);
+    color: black;
+}

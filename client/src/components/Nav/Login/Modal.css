@@ -1,0 +1,42 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(20, 20, 20, 0.9);
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    z-index: 10;
+}
+
+.modal input {
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    min-height: 30px;
+    width: 100%;
+}
+
+.modal button {
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    padding: 6px 12px;
+}
+
+.modal p a {
+    text-decoration: underline solid white;
+}
+
+.modal p a:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrong {
+    border: 2px solid rgb(246, 20, 20);
+}
