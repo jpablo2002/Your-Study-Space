@@ -40,13 +40,13 @@ export const findUser = async (req, res) => {
 
 export const updateUserTasks = async (req, res) => {
     const username = req.params.username;
-    const newTask = req.body;
+    const updatedTasks = req.body;
+    console.log(updatedTasks);
 
     const found = await User.findOne({ username });
 
     try {
-        found.tasks.push(newTask)
-        console.log(found.tasks);
+        found.tasks = updatedTasks;
         await found.save()
         res.status(201).json({ updateTasks: true });
     } catch (err) {
