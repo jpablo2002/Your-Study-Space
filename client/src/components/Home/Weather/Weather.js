@@ -29,7 +29,7 @@ const Weather = () => {
 
     return (
         <div className="weather">
-            <h1>{weather?.temp + ' and ' || ''} {weather?.appearance || ''}</h1>
+            <h1>{weather?.temp || ''} {weather?.appearance || ''}</h1>
         </div>
     );
 }
