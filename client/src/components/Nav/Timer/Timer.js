@@ -11,8 +11,6 @@ const Timer = () => {
 
 
     const startTimer = function () {
-        console.log(studying);
-
         if (!studying) {
             const start = new Date(null);
             const end = new Date(null);
@@ -28,7 +26,6 @@ const Timer = () => {
                     setRemaining('1:00:00');
                     clearInterval(timer);
                 } else {
-                    console.log(`${minutes}:${seconds}`);
                     setRemaining(`${minutes}:${seconds}`);
                     setTime(prev => prev - 1)
                     end.setTime(end.getTime() - 1000);
@@ -42,10 +39,18 @@ const Timer = () => {
         setStudying(!studying);
     }
 
+    const resetTimer = function () {
+        if (!studying) {
+            setTime(3600);
+            setRemaining('1:00:00');
+        }
+    }
+
     return (
         <div className="timer">
             <h1>{remaining}</h1>
             <button onClick={startTimer} className="study-button button">{!studying ? 'Begin Studying!' : 'Stop'}</button>
+            <button onClick={resetTimer} className="study-button button">Reset</button>
         </div>
     );
 }
