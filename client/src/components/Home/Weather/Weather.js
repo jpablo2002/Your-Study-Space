@@ -11,7 +11,9 @@ const Weather = () => {
         const coords = pos.coords;
         fetchWeather(coords.longitude, coords.latitude)
             .then(res => {
-                setWeather({ temp: res.data.temp.temp, appearance: res.data.appearance[0].main });
+                console.log(navigator.language);
+                const temp = new Intl.NumberFormat(`${navigator.language}`, { style: 'unit', unit: 'celsius' }).format(res.data.temp.temp)
+                setWeather({ temp, appearance: res.data.appearance[0].main });
             })
             .catch(err => console.log(err.message))
     }
@@ -28,7 +30,7 @@ const Weather = () => {
 
     return (
         <div className="weather">
-            <h1>{weather?.temp || ''} {weather?.appearance || ''}</h1>
+            <h1>{weather?.temp || ''} and {weather?.appearance || ''}</h1>
         </div>
     );
 }
