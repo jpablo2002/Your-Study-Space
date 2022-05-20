@@ -14,6 +14,10 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }))
 app.use('/users', userRoutes)
 app.use('/weather', weatherRoutes)
 
+app.get('/', (req, res) => {
+    res.send('Application is running')
+});
+
 
 const password = "Ss7aloNlGTsrBXoR"
 
