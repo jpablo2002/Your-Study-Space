@@ -11,6 +11,6 @@
     color: white;
 }
 
-h1.weather {
+.weather h1 {
     margin-right: 30px;
 }

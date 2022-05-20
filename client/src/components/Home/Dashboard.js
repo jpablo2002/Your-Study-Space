@@ -19,7 +19,7 @@ const Dashboard = () => {
     return (
         <div className='dashboard' onClick={closeModal}>
             <Controls />
-            <h1 className='title'></h1>
+            <h1 className='title'>{''}</h1>
             <Weather />
         </div>
     );

@@ -6,7 +6,7 @@ const Controls = () => {
     return (
         <div className="controls">
             <p>Drowsy Morning by JP Acosta</p>
-            <audio src="drowsy_morning.m4a" autoPlay controls className="controls"></audio>
+            <audio src="drowsy_morning.m4a" autoPlay controls loop className="controls"></audio>
         </div>
     );
 }

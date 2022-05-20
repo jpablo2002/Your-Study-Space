@@ -33,8 +33,8 @@ const Modal = (props) => {
         } else {
             findUser(username, password)
                 .then(res => {
-                    let userFound, allowLogin;
-                    ({ userFound, allowLogin } = res.data);
+                    let userFound;
+                    ({ userFound } = res.data);
                     if (userFound) {
                         console.log("This user already exists");
                     } else {
