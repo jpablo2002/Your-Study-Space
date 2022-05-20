@@ -6,19 +6,22 @@ const Form = (props) => {
     const [deadline, setDeadline] = useState('')
 
     const addTask = async function (e) {
-        if (task && deadline) {
+        if (task && deadline && props.currUser) {
             const currentUser = props.currUser;
             const updatedTasks = props.tasks.concat([{ task, deadline }])
             updateTasks(currentUser, updatedTasks)
                 .then((res) => {
                     if (res.data.updateTasks) {
-                        props.setTasks(prevTasks => updatedTasks)
+                        props.setTasks(updatedTasks)
                     }
                 })
                 .catch((err) => console.log(err.message));
-            setTask((prevValue) => '');
-            setDeadline((prevValue) => '');
         }
+        else {
+            alert('You must log in to add tasks');
+        }
+        setTask('');
+        setDeadline('');
     }
 
     return (

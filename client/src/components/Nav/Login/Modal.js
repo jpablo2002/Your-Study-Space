@@ -22,15 +22,17 @@ const Modal = (props) => {
                         document.querySelector('.modal').classList.toggle('hidden');
                         home.classList.toggle('blur');
                         dashboard.classList.toggle('blur');
+                        props.setUsername('');
+                        props.setPassword('')
                     } else if (userFound && !allowLogin) {
                         document.querySelectorAll('input').forEach((inp) => inp.classList.toggle('wrong'));
-                        props.setUsername((prevValue) => '');
-                        props.setPassword((prevValue) => '')
+                        props.setUsername('');
+                        props.setPassword('');
 
                     } else {
                         document.querySelectorAll('input').forEach((inp) => inp.classList.toggle('wrong'));
-                        props.setUsername((prevValue) => '');
-                        props.setPassword((prevValue) => '')
+                        props.setUsername('');
+                        props.setPassword('');
                     }
                 })
         } else {
@@ -39,7 +41,9 @@ const Modal = (props) => {
                     let userFound;
                     ({ userFound } = res.data);
                     if (userFound) {
-                        console.log("This user already exists");
+                        alert("This user already exists");
+                        props.setUsername('');
+                        props.setPassword('')
                     } else {
                         addUser({
                             username: props.username,
@@ -54,8 +58,8 @@ const Modal = (props) => {
                         document.querySelector('.modal').classList.toggle('hidden');
                         home.classList.toggle('blur');
                         dashboard.classList.toggle('blur');
-                        props.setUsername((prevValue) => '');
-                        props.setPassword((prevValue) => '')
+                        props.setUsername('');
+                        props.setPassword('')
                     }
                 })
         }
