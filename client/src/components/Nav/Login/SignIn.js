@@ -12,10 +12,13 @@ const SignIn = (props) => {
             home.classList.toggle('blur');
             dashboard.classList.toggle('blur')
         } else {
-            props.setCurrUser(() => '');
-            props.setSignedIn(() => false);
+            props.setCurrUser('');
+            props.setSignedIn(false);
             props.setTasks([]);
             document.querySelector('.title').textContent = '';
+            props.setUsername('');
+            props.setLoggingIn(false);
+            props.setPassword('')
         }
     }
 

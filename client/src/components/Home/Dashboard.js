@@ -4,7 +4,7 @@ import Weather from './Weather/Weather';
 
 import './Dashboard.css'
 
-const Dashboard = () => {
+const Dashboard = (props) => {
     const closeModal = function (e) {
         const modal = document.querySelector('.modal');
         const login = document.querySelector('.login-button')
@@ -13,6 +13,9 @@ const Dashboard = () => {
             document.querySelector('.modal').classList.toggle('hidden');
             home.classList.toggle('blur');
             dashboard.classList.toggle('blur');
+            props.setUsername('');
+            props.setLoggingIn(false);
+            props.setPassword('')
         }
     }
 

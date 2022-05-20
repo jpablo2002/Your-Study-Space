@@ -12,12 +12,15 @@ const App = (props) => {
             modal.classList.toggle('hidden');
             home.classList.toggle('blur');
             dashboard.classList.toggle('blur');
+            props.setUsername('');
+            props.setLoggingIn(false);
+            props.setPassword('')
         }
     }
 
     return (
         <div className="home" onClick={closeModal}>
-            <Nav signedIn={props.signedIn} currUser={props.currUser} setSignedIn={props.setSignedIn} setCurrUser={props.setCurrUser} />
+            <Nav signedIn={props.signedIn} currUser={props.currUser} setSignedIn={props.setSignedIn} setCurrUser={props.setCurrUser} setUsername={props.setUsername} setPassword={props.setPassword} setLoggingIn={props.setLoggingIn} />
         </div>
     );
 }

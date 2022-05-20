@@ -8,12 +8,15 @@ import Modal from "./components/Nav/Login/Modal";
 const App = () => {
     const [signedIn, setSignedIn] = useState(false);
     const [currUser, setCurrUser] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [loggingIn, setLoggingIn] = useState(false);
 
     return (
         <div className="app">
-            <Modal signedIn={signedIn} currUser={currUser} setSignedIn={setSignedIn} setCurrUser={setCurrUser} />
-            <Home signedIn={signedIn} currUser={currUser} setSignedIn={setSignedIn} setCurrUser={setCurrUser} />
-            <Dashboard />
+            <Modal signedIn={signedIn} currUser={currUser} setSignedIn={setSignedIn} setCurrUser={setCurrUser} username={username} password={password} loggingIn={loggingIn} setUsername={setUsername} setPassword={setPassword} setLoggingIn={setLoggingIn} />
+            <Home signedIn={signedIn} currUser={currUser} setSignedIn={setSignedIn} setCurrUser={setCurrUser} setUsername={setUsername} setPassword={setPassword} setLoggingIn={setLoggingIn} />
+            <Dashboard setUsername={setUsername} setPassword={setPassword} setLoggingIn={setLoggingIn} />
         </div>
     );
 }

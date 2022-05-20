@@ -12,7 +12,7 @@ const Nav = (props) => {
         <div className="nav">
             <Notepad signedIn={props.signedIn} currUser={props.currUser} tasks={tasks} setTasks={setTasks} />
             <Timer />
-            <SignIn signedIn={props.signedIn} setSignedIn={props.setSignedIn} setCurrUser={props.setCurrUser} setTasks={setTasks} />
+            <SignIn signedIn={props.signedIn} setSignedIn={props.setSignedIn} setCurrUser={props.setCurrUser} setTasks={setTasks} setUsername={props.setUsername} setPassword={props.setPassword} setLoggingIn={props.setLoggingIn} />
         </div>
     );
 }
