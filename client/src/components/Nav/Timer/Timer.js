@@ -20,29 +20,34 @@ const Timer = () => {
                 const seconds = (end.getSeconds() - start.getSeconds() + '').padStart(2, '0');
                 const minutes = (end.getMinutes() - start.getMinutes() + '').padStart(2, '0');
 
+                setRemaining(`${minutes}:${seconds}`);
+                setTime(prev => prev - 1)
+                end.setTime(end.getTime() - 1000);
+
                 if (seconds === '00' && minutes === '00') {
-                    alert('Great job! Take a break!😁');
                     setTime(3600);
                     setRemaining('1:00:00');
-                    clearInterval(timer);
-                } else {
-                    setRemaining(`${minutes}:${seconds}`);
-                    setTime(prev => prev - 1)
-                    end.setTime(end.getTime() - 1000);
+                    clearInterval(tick);
+                    setTimer();
+                    setStudying(false)
+                    alert('Great job! Take a break!😁');
                 }
-                setTimer(tick);
             }, 1000, [end])
+            setTimer(tick);
         } else {
             clearInterval(timer);
+            setTimer();
         }
-
         setStudying(!studying);
+
     }
 
     const resetTimer = function () {
         if (!studying) {
             setTime(3600);
             setRemaining('1:00:00');
+            clearInterval(timer)
+            setTimer();
         }
     }
 

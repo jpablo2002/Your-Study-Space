@@ -4,9 +4,6 @@ import { findUser, addUser } from "../../../api";
 import './Modal.css'
 
 const Modal = (props) => {
-    // const [username, setUsername] = useState('');
-    // const [password, setPassword] = useState('');
-    // const [loggingIn, setLoggingIn] = useState(false);
 
     const logIn = function () {
         if (props.loggingIn) {
@@ -51,7 +48,7 @@ const Modal = (props) => {
                             tasks: [],
                             background: 'study_image.jpeg'
                         })
-                            .then((res) => console.log(res))
+                            .then()
                             .catch((err) => console.log(err.message))
                         const [, home, dashboard] = document.querySelector('.app').children;
                         document.querySelector('.dashboard').querySelector('h1').textContent = `${props.username}'s Study Space`
@@ -59,7 +56,9 @@ const Modal = (props) => {
                         home.classList.toggle('blur');
                         dashboard.classList.toggle('blur');
                         props.setUsername('');
-                        props.setPassword('')
+                        props.setPassword('');
+                        props.setSignedIn(true);
+                        props.setCurrUser(props.username);
                     }
                 })
         }
@@ -79,8 +78,8 @@ const Modal = (props) => {
             <button className="logIn" onClick={logIn}>{!props.loggingIn ? 'Sign Up' : ' Log In'}</button>
             <p>Already have an account? <a onClick={() => {
                 props.setLoggingIn(true);
-                props.setUsername((prevValue) => '');
-                props.setPassword((prevValue) => '');
+                props.setUsername('');
+                props.setPassword('');
             }}>Log in</a></p>
         </div>
     );
