@@ -7,4 +7,4 @@ This is your all in one study platform with a timer to time your study sessions,
 Hosted at: https://your-study-space.netlify.app/
 
 ## Upcoming
-While the absolutely essential is fully operating, more great features that will be implemented in the future include: selecting different Pomodoro studying patterns, changing your study home screen, and more!
+While the absolutely essential is fully operating, more great features that will be implemented in the future include: creating study rooms with friends, selecting different Pomodoro studying patterns, changing your study home screen, and more!
