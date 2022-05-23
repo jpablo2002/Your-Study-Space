@@ -12,7 +12,6 @@ const Weather = () => {
         fetchWeather(coords.longitude, coords.latitude)
             .then(res => {
                 const temp = new Intl.NumberFormat(`${navigator.language}`, { style: 'unit', unit: 'celsius', minimumFractionDigits: 1, maximumFractionDigits: 1, }).format(res.data.temp.temp)
-                console.log(temp, typeof temp);
                 setWeather({ temp, appearance: res.data.appearance[0].main });
             })
             .catch(err => console.log(err.message))
