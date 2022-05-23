@@ -47,7 +47,7 @@ export const updateUserTasks = async (req, res) => {
     try {
         found.tasks = updatedTasks;
         await found.save()
-        res.status(201).json({ updateTasks: true });
+        res.status(201).json({ updateTasks: true, newId: found.tasks[found.tasks.length - 1]._id });
     } catch (err) {
         res.status(409).json({ message: err.message })
     }

@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const url = 'https://your-study-space.herokuapp.com/users';
+// https://your-study-space.herokuapp.com/users
+const url = 'http://localhost:4000/users';
 
 export const fetchUsers = () => axios.get(url);
 

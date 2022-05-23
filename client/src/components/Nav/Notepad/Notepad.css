@@ -33,6 +33,7 @@
     border-radius: 15px;
     margin: 8px 0;
     padding: 4px 8px;
+    transition: all 0.4s linear 0s;
 }
 
 .note button {
@@ -47,4 +48,8 @@
 .note button:active {
     background-color: rgb(244, 242, 242);
     color: black;
+}
+
+.remove {
+    transform: translateX(-1000px);
 }
