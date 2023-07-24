@@ -1,5 +1,7 @@
 # Your-Study-Space
 
+![Uploading Screenshot 2023-07-23 at 10.12.48 PM.png…]()
+
 # Introduction
 Welcome to Your Study Space!
 This is your all in one study platform with a timer to time your study sessions, a list to add your tasks to do, and all customization and tasks are saved and rendered when you log in!
