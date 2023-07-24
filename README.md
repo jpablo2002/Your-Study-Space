@@ -1,6 +1,6 @@
 # Your-Study-Space
 
-![Uploading Screenshot 2023-07-23 at 10.12.48 PM.png…]()
+<img width="1440" alt="your-study-space-homepage" src="https://github.com/jpablo2002/Your-Study-Space/assets/90735251/1144a9a9-48dc-4301-b0c7-465725e081f9">
 
 # Introduction
 Welcome to Your Study Space!
